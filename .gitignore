@@ -194,3 +194,9 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+# Xamarin
+Components
+[Pp]ackages
+*.userprefs
+Resource.designer.cs
