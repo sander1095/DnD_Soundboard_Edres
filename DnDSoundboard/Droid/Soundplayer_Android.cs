@@ -27,8 +27,13 @@ namespace DnDSoundboard.Droid
 		/// </summary>
 		public void PlaySound(SoundboardItem item)
 		{
-			player = MediaPlayer.Create (Android.App.Application.Context, Forms.Context.Assets.Open (item.FileName));
+			player = new MediaPlayer ();
+			var fd = Xamarin.Forms.Forms.Context.Assets.OpenFd (item.FileName + ".mp3");
+			player.SetDataSource (fd.FileDescriptor);
+			player.Prepare ();
 			player.Start ();
+			
+
 		}
 	}
 
