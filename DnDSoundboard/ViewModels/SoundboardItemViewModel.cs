@@ -4,13 +4,14 @@ using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using DnDSoundboard.Models;
 using DnDSoundboard.DependencyServices.Interfaces;
-using System.Windows.Input;
 
 
 namespace DnDSoundboard.ViewModels
 {
 	public class SoundboardItemViewModel : INotifyPropertyChanged
 	{
+
+		private ListView listview { get; set; }
 		public event PropertyChangedEventHandler PropertyChanged;
 
 		public ObservableCollection<SoundboardItem> SoundboardItems { get; set; }
@@ -22,17 +23,16 @@ namespace DnDSoundboard.ViewModels
 				return _selectedSoundboardItem;
 			}
 			set{
-				if (_selectedSoundboardItem != value) {
+				if (_selectedSoundboardItem != value && value != null) {
 					_selectedSoundboardItem = value;
 					PlaySound (value);
-
-
 				}
 
 			}
 		}
-		public SoundboardItemViewModel ()
+		public SoundboardItemViewModel (ListView lv)
 		{
+			this.listview = lv;
 			FillList ();
 
 		}
@@ -47,6 +47,8 @@ namespace DnDSoundboard.ViewModels
 
 		public void PlaySound(SoundboardItem item)
 		{
+			//this.listview.SelectedItem = null;
+			_selectedSoundboardItem = null;
 			DependencyService.Get<ISoundPlayer> ().PlaySound (item);
 		}
 	}

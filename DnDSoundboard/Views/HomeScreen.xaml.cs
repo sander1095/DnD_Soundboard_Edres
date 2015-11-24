@@ -11,7 +11,7 @@ namespace DnDSoundboard.Views
 		public HomeScreen ()
 		{
 			InitializeComponent ();
-			BindingContext = new SoundboardItemViewModel ();
+			BindingContext = new SoundboardItemViewModel (SoundboardListView);
 		}
 	}
 }
