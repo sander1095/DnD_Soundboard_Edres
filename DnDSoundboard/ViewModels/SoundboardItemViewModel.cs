@@ -47,7 +47,7 @@ namespace DnDSoundboard.ViewModels
 
 		public void PlaySound(SoundboardItem item)
 		{
-			//this.listview.SelectedItem = null;
+			this.listview.SelectedItem = null;
 			_selectedSoundboardItem = null;
 			DependencyService.Get<ISoundPlayer> ().PlaySound (item);
 		}
