@@ -79,6 +79,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Assets\test.mp3" />
   </ItemGroup>
   <Import Project="..\DnDSoundboard.projitems" Label="Shared" Condition="Exists('..\DnDSoundboard.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

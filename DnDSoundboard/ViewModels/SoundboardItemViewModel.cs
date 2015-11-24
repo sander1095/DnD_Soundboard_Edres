@@ -42,12 +42,12 @@ namespace DnDSoundboard.ViewModels
 		public void FillList()
 		{
 			SoundboardItems = new ObservableCollection<SoundboardItem> ();
-			SoundboardItems.Add(new SoundboardItem("Test","Test"));
+			SoundboardItems.Add(new SoundboardItem("test","test"));
 		}
 
 		public void PlaySound(SoundboardItem item)
 		{
-			DependencyService.Get<ISoundPlayer> ().PlaySound ();
+			DependencyService.Get<ISoundPlayer> ().PlaySound (item);
 		}
 	}
 }

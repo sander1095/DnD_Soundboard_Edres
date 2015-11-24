@@ -21,6 +21,11 @@ namespace DnDSoundboard.Models
 			this.FileName = FileName;
 		}
 
+		public override string ToString ()
+		{
+			return this.Name;
+		}
+
 	}
 }
 
