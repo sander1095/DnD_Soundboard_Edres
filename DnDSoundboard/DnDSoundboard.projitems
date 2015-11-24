@@ -15,12 +15,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\SoundboardItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SoundboardItemViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\ISoundPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)DependencyServices\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\HomeScreen.xaml">
