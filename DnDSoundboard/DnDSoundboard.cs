@@ -1,5 +1,5 @@
 ﻿using System;
-
+using DnDSoundboard.Views;
 using Xamarin.Forms;
 
 namespace DnDSoundboard
@@ -9,17 +9,8 @@ namespace DnDSoundboard
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
+			MainPage = new HomeScreen();
+
 		}
 
 		protected override void OnStart ()
